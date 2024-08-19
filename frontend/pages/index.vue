@@ -9,10 +9,11 @@ const username = ref('')
 const password = ref('')
 const router = useRouter()
 const {toast} = useToast()
+const config = useRuntimeConfig();
 
 const handleSubmit = async () => {
   try {
-    const response = await fetch('http://localhost:5000/api/user/login', {
+    const response = await fetch(`${config.public.API_BASE_URL}/api/user/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; x-api-version=1.0'

@@ -80,7 +80,7 @@ const handleGet = async () => {
   try {
     console.log('Página:', page.value, 'Itens por página:', pageSize.value);
 
-    const response = await fetch(`http://localhost:5000/api/users?page=${page.value}&pageSize=${pageSize.value}`, {
+    const response = await fetch(`${config.public.API_BASE_URL}/api/users?page=${page.value}&pageSize=${pageSize.value}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -147,7 +147,7 @@ const handleSubmit = async () => {
 
 const handleDelete = async (id: string) => {
   try {
-    const response = await fetch(`http://localhost:5000/api/user/${id}`, {
+    const response = await fetch(`${config.public.API_BASE_URL}/api/user/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
