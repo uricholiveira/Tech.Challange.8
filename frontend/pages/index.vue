@@ -16,6 +16,7 @@ const config = useRuntimeConfig();
 
 const handleSubmit = async () => {
   try {
+    isLoading.value = true
     const response = await fetch(`${config.public.API_BASE_URL}/api/user/login`, {
       method: 'POST',
       headers: {
@@ -45,6 +46,9 @@ const handleSubmit = async () => {
   } catch (error) {
     console.error('Erro de rede:', error);
   }
+  finally {
+    isLoading.value = false
+  }
 }
 
 </script>
@@ -71,7 +75,7 @@ const handleSubmit = async () => {
         </div>
       </CardContent>
       <CardFooter>
-        <Button class="w-full" @click="handleSubmit">
+        <Button class="w-full" @click="handleSubmit" :disabled="isLoading">
           <Loader2 class="w-4 h-4 animate-spin" v-if="isLoading"/>
           Entrar
         </Button>

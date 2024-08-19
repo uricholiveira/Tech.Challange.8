@@ -306,7 +306,7 @@ const handleDelete = async (id: string) => {
                   Exportar
                 </span>
               </Button>
-              <Button class="h-7 gap-1" size="sm" @click="handleGet">
+              <Button class="h-7 gap-1" size="sm" @click="handleGet" :disabled="isLoading">
                 <Loader2 class="w-4 h-4 animate-spin" v-if="isLoading"/>
                 <span class="sr-only sm:not-sr-only sm:whitespace-nowrap">
                       Atualizar
