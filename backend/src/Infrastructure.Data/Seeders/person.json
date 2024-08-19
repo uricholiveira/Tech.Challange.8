@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "gender": "male",
+    "name": {
+      "title": "Test",
+      "first": "Tamara",
+      "last": "Žigić"
+    },
+    "location": {
+      "id": 1,
+      "personId": 1,
+      "street": {
+        "locationId": 1,
+        "number": 6294,
+        "name": "Porodice Praizović"
+      },
+      "city": "Požega",
+      "state": "Rasina",
+      "country": "Serbia",
+      "postcode": 88493,
+      "coordinates": {
+        "locationId": 1,
+        "latitude": "61.4917",
+        "longitude": "84.4481"
+      },
+      "timezone": {
+        "locationId": 1,
+        "offset": "+3:30",
+        "description": "Tehran"
+      }
+    },
+    "email": "tamara.zigic@example.com",
+    "login": {
+      "personId": 1,
+      "uuid": "dfb9aaaa-d637-41d1-a443-306 9966dbfb3",
+      "username": "demo",
+      "password": "demo",
+      "salt": "zmEe2gjs",
+      "md5": "5a86aebc030298d929f574bae2335b92",
+      "sha1": "09ab08236c7d0adf0c755c384b02ce209350e7ba",
+      "sha256": "9c814c4f32641f95f0999e23e3fc32eab81b0daf1e9c811ad770cd58cbfbc58f"
+    },
+    "dob": {
+      "personId": 1,
+      "date": "1969-03-03T16:55:10.199Z",
+      "age": 55
+    },
+    "registered": {
+      "personId": 1,
+      "date": "2014-06-16T07:40:39.214Z",
+      "age": 10
+    },
+    "phone": "024-8797-257",
+    "cell": "068-4326-524",
+    "idInfo": {
+      "personId": 1,
+      "name": "SID",
+      "value": "095041942"
+    },
+    "picture": {
+      "personId": 1,
+      "large": "https://randomuser.me/api/portraits/women/56.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/56.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/56.jpg"
+    },
+    "nat": "RS"
+  }
+]

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Infrastructure.Data\Infrastructure.Data.csproj"/>
+        <ProjectReference Include="..\Infrastructure.Http\Infrastructure.Http.csproj"/>
+        <ProjectReference Include="..\Infrastructure.Shared.Authentication\Infrastructure.Shared.Authentication.csproj"/>
+        <ProjectReference Include="..\Infrastructure.Shared.Hosting\Infrastructure.Shared.Hosting.csproj"/>
+        <ProjectReference Include="..\Infrastructure.Shared.Ioc\Infrastructure.Shared.Ioc.csproj"/>
+        <ProjectReference Include="..\Infrastructure.Shared.Mediator\Infrastructure.Shared.Mediator.csproj"/>
+        <ProjectReference Include="..\Infrastructure.Shared.OpenTelemetry\Infrastructure.Shared.OpenTelemetry.csproj"/>
+        <ProjectReference Include="..\Random.User.Application\Random.User.Application.csproj"/>
+        <ProjectReference Include="..\Random.User.Domain\Random.User.Domain.csproj"/>
+    </ItemGroup>
+
+</Project>
