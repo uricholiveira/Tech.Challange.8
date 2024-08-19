@@ -57,6 +57,7 @@ import {NumberField, NumberFieldContent, NumberFieldDecrement, NumberFieldIncrem
 import {useToast} from "@/components/ui/toast";
 import { useRouter } from "vue-router";
 import { ref, reactive, onMounted } from 'vue'
+import {getEnv} from "nitropack/runtime/utils.env";
 
 const page = ref(1);
 const pageSize = ref(10);
@@ -105,6 +106,8 @@ const handleGet = async () => {
   }
 };
 
+const config = useRuntimeConfig();
+
 onMounted(async () => {
   await handleGet();
 });
@@ -122,7 +125,7 @@ const handlePageSizeChange = async (newPageSize: number) => {
 
 const handleSubmit = async () => {
   try {
-    const response = await fetch('http://localhost:5000/api/user', {
+    const response = await fetch(`${config.public.API_BASE_URL}/api/user`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
