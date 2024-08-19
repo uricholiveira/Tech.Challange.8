@@ -2,9 +2,11 @@ using Infrastructure.Data.Entities;
 
 namespace Random.User.Domain.Queries.User.List;
 
-public class ListUsersQueryResponse : Person
+public class ListUsersQueryResponse
 {
     public string? Email { get; set; }
+    public string? Phone { get; set; }
+    public DateTime CreatedAt { get; set; }
     public ListUsersNameQueryResponse Name { get; set; }
     public ListUsersLoginQueryResponse Login { get; set; }
     public ListUserPictureQueryResponse Picture { get; set; }

@@ -4,10 +4,13 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Input} from '@/components/ui/input'
 import {Label} from '@/components/ui/label'
 import {useToast} from "~/components/ui/toast";
+import {ref} from "vue";
+import {Loader2} from "lucide-vue-next";
 
 const username = ref('')
 const password = ref('')
 const router = useRouter()
+const isLoading = ref(false);
 const {toast} = useToast()
 const config = useRuntimeConfig();
 
@@ -69,6 +72,7 @@ const handleSubmit = async () => {
       </CardContent>
       <CardFooter>
         <Button class="w-full" @click="handleSubmit">
+          <Loader2 class="w-4 h-4 animate-spin" v-if="isLoading"/>
           Entrar
         </Button>
       </CardFooter>

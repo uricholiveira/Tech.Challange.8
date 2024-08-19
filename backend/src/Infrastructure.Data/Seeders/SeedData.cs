@@ -17,12 +17,12 @@ public class SeedData
 
         context.Persons.Add(new Person
         {
-            Gender = "female",
+            Gender = "male",
             Name = new Name
             {
-                Title = "Ms",
-                First = "Tamara",
-                Last = "Žigić"
+                Title = "Mrs",
+                First = "Demo",
+                Last = "User"
             },
             Location = new Location
             {
@@ -46,7 +46,7 @@ public class SeedData
                     Description = "Tehran"
                 }
             },
-            Email = "example@example.com",
+            Email = "demo@example.com",
             Login = new Login
             {
                 Id = Guid.Parse("dfb9aaaa-d637-41d1-a443-3069966dbfb3"),
